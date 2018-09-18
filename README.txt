@@ -1,12 +1,12 @@
-This simple project demonstrates how Async Hooks can help find automatically the original HTTP request which trigerred an error.
+This simple project shows how Async Hooks can help find automatically find the original HTTP request that trigerred an error.
 
 It was generated with:
   express --view=ejs myapp
 The only files which we modified after are:
-  app.js: the modified section is explicitely delimited by comments
-  asyncHooksDoctrineSimplified.js: this is core of the async hooks implementation
+  myapp/app.js: the modified section is explicitely delimited by comments
+  myapp/asyncHooksDoctrineSimplified.js: this is core of the async hooks implementation
 
-To run it (you need at least Node.js):
+To run it (you need at least Node.js 8):
   cd myapp
   npm install
   npm start
@@ -15,7 +15,7 @@ Then to test the concept:
   Go to http://localhost:3000/ to check the app is running (you should see "Welcome to Express")
   Go to http://localhost:3000/crash1 or http://localhost:3000/crash2
   
-The application should crash, but you should be able to see in the console whether it was /crash1 or /crash2 that triggered the crash. The is the value added by our Async Hooks system.
+The application will crash, but you should be able to see in the console whether it was /crash1 or /crash2 that triggered the crash. The is the value added by our Async Hooks system.
 
 Example here with crash1:
 *** Application crashed (uncaught exception) ***
