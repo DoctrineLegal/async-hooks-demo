@@ -1,4 +1,4 @@
-The simple project demonstrates how Async Hooks can help find automatically the original HTTP request which trigerred an error.
+This simple project demonstrates how Async Hooks can help find automatically the original HTTP request which trigerred an error.
 
 It was generated with:
   express --view=ejs myapp
